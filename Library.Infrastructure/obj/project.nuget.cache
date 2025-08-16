@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "rtAE9T4LxKw=",
+  "dgSpecHash": "6qrWcGoK5ao=",
   "success": true,
   "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Library.Infrastructure.csproj",
-=======
-  "dgSpecHash": "pTi85E2cwRI=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Infrastructure\\Library.Infrastructure.csproj",
->>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
   "expectedPackageFiles": [
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
@@ -28,5 +22,15 @@
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.1\\microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Library.Infrastructure.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Library.Infrastructure.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

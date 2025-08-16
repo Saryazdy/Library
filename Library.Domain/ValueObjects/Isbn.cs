@@ -1,8 +1,7 @@
 ﻿using Library.Domain.Common;
-<<<<<<< HEAD
+
 using Library.Domain.Exceptions;
-=======
->>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "qsOM1z6i3pE=",
   "success": true,
   "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj",
-=======
-  "dgSpecHash": "DeCLCO022E8=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj",
->>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
   "expectedPackageFiles": [
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
@@ -23,5 +17,15 @@
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.1\\microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
