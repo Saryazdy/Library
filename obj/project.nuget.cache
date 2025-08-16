@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "suwAB1xMaXw=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\Library\\Library.API.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.OpenApi' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.openapi/index.json'.\r\n  An error occurred while sending the request.\r\n  Unable to connect to the remote server\r\n  A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 185.200.125.136:443",
+      "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library\\Library.API.csproj",
+      "filePath": "C:\\Users\\m_saryazdi\\source\\repos\\Library\\Library.API.csproj",
+      "libraryId": "Microsoft.AspNetCore.OpenApi",
+      "targetGraphs": []
+    }
+  ]
+}
