@@ -1,0 +1,6 @@
+C:\Users\m_saryazdi\source\repos\lib\Library.Domain\obj\Debug\net9.0\Library.Domain.csproj.AssemblyReference.cache
+C:\Users\m_saryazdi\source\repos\lib\Library.Domain\obj\Debug\net9.0\Library.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m_saryazdi\source\repos\lib\Library.Domain\obj\Debug\net9.0\Library.Domain.AssemblyInfoInputs.cache
+C:\Users\m_saryazdi\source\repos\lib\Library.Domain\obj\Debug\net9.0\Library.Domain.AssemblyInfo.cs
+C:\Users\m_saryazdi\source\repos\lib\Library.Domain\obj\Debug\net9.0\Library.Domain.csproj.CoreCompileInputs.cache
+C:\Users\m_saryazdi\source\repos\lib\Library.Domain\obj\Debug\net9.0\Library.Domain.sourcelink.json

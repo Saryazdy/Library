@@ -1,0 +1,221 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\common\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\common\\baseevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\common\\ihasdomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\common\\auditableentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F84A000-F0B4-469F-AEC5-171471567C08}|Library.API.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library\\library.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3F84A000-F0B4-469F-AEC5-171471567C08}|Library.API.csproj|solutionrelative:library.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\entities\\bookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F71EE32-9CB8-4BE9-9FF4-BEE4FBC8BB0E}|..\\Library.Domain\\Library.Domain.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.domain\\valueobjects\\isbn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A22DFA-897A-43BD-8165-6736F196148B}|..\\Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.infrastructure\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3A22DFA-897A-43BD-8165-6736F196148B}|..\\Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\m_saryazdi\\source\\repos\\lib\\library.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookAuthor.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Entities\\BookAuthor.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Entities\\BookAuthor.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Entities\\BookAuthor.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Entities\\BookAuthor.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:57.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Entities\\Book.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Entities\\Book.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Entities\\Book.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Entities\\Book.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:55.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Entities\\Author.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Entities\\Author.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Entities\\Author.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Entities\\Author.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:52.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValueObject.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\ValueObject.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Common\\ValueObject.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\ValueObject.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Common\\ValueObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:47.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IHasDomainEvent.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\IHasDomainEvent.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Common\\IHasDomainEvent.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\IHasDomainEvent.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Common\\IHasDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:39.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseEvent.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\BaseEvent.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Common\\BaseEvent.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\BaseEvent.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Common\\BaseEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:37.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:24.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuditableEntity.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\AuditableEntity.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\Common\\AuditableEntity.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Common\\AuditableEntity.cs",
+              "RelativeToolTip": "..\\Library.Domain\\Common\\AuditableEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:14.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Repositories\\BookRepository.cs",
+              "RelativeDocumentMoniker": "..\\Library.Infrastructure\\Repositories\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Repositories\\BookRepository.cs",
+              "RelativeToolTip": "..\\Library.Infrastructure\\Repositories\\BookRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:03.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\Library.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\Library.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:36:01.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Isbn.cs",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\ValueObjects\\Isbn.cs",
+              "RelativeDocumentMoniker": "..\\Library.Domain\\ValueObjects\\Isbn.cs",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\ValueObjects\\Isbn.cs",
+              "RelativeToolTip": "..\\Library.Domain\\ValueObjects\\Isbn.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:35:12.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Library.API",
+              "DocumentMoniker": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library\\Library.API.csproj",
+              "RelativeDocumentMoniker": "Library.API.csproj",
+              "ToolTip": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library\\Library.API.csproj",
+              "RelativeToolTip": "Library.API.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-16T11:34:56.818Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
