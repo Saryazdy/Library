@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\Library.Application.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\Library.Application.csproj",
         "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\obj\\",
+=======
+    "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj",
+        "projectName": "Library.Application",
+        "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj",
+        "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\obj\\",
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\m_saryazdi\\Desktop\\Components\\Offline Packages",
@@ -35,8 +49,13 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj": {
                 "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj"
+=======
+              "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj": {
+                "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj"
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
               }
             }
           }
@@ -82,6 +101,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -90,6 +110,16 @@
         "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj",
         "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\obj\\",
+=======
+    "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj",
+        "projectName": "Library.Domain",
+        "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj",
+        "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\obj\\",
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\m_saryazdi\\Desktop\\Components\\Offline Packages",
@@ -130,12 +160,15 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+<<<<<<< HEAD
           "dependencies": {
             "MediatR": {
               "target": "Package",
               "version": "[13.0.0, )"
             }
           },
+=======
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
           "imports": [
             "net461",
             "net462",

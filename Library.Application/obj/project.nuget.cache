@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "oSYPgMjzDa0=",
   "success": true,
   "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\Library.Application.csproj",
+=======
+  "dgSpecHash": "rkb0a91y67A=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj",
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
   "expectedPackageFiles": [
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

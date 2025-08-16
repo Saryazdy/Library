@@ -209,9 +209,12 @@
       "Library.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+<<<<<<< HEAD
         "dependencies": {
           "MediatR": "13.0.0"
         },
+=======
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
         "compile": {
           "bin/placeholder/Library.Domain.dll": {}
         },
@@ -614,11 +617,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\Library.Application.csproj",
       "projectName": "Library.Application",
       "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\Library.Application.csproj",
       "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Application\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj",
+      "projectName": "Library.Application",
+      "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\Library.Application.csproj",
+      "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Application\\obj\\",
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\m_saryazdi\\Desktop\\Components\\Offline Packages",
@@ -642,8 +653,13 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj": {
               "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj"
+=======
+            "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj": {
+              "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj"
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
             }
           }
         }

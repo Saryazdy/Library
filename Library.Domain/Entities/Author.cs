@@ -16,7 +16,11 @@ namespace Library.Domain.Entities
         private readonly List<BookAuthor> _bookAuthors = new();
         public IReadOnlyCollection<BookAuthor> BookAuthors => _bookAuthors.AsReadOnly();
 
+<<<<<<< HEAD
         private Author() { } 
+=======
+        private Author() { } // برای EF
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
 
         public Author(string firstName, string lastName)
         {

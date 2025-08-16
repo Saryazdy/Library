@@ -595,11 +595,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj",
       "projectName": "Library.Domain",
       "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\Library.Domain.csproj",
       "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Domain\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj",
+      "projectName": "Library.Domain",
+      "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\Library.Domain.csproj",
+      "packagesPath": "C:\\Users\\m_saryazdi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\m_saryazdi\\source\\repos\\Library.Domain\\obj\\",
+>>>>>>> d3c0b503dfc5f415fa69e49ae0bc5629030139fc
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Users\\m_saryazdi\\Desktop\\Components\\Offline Packages",
