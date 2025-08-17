@@ -9,22 +9,23 @@ namespace Library.Domain.Entities
 {
     public class Author : AuditableEntity
     {
-      
         public string FirstName { get; private set; } = string.Empty;
         public string LastName { get; private set; } = string.Empty;
 
         private readonly List<BookAuthor> _bookAuthors = new();
         public IReadOnlyCollection<BookAuthor> BookAuthors => _bookAuthors.AsReadOnly();
 
-        private Author() { } 
+        private Author() { } // EF یا Serialization
 
+        public static Author Create(string firstName, string lastName)
+            => new Author(firstName, lastName);
 
-        public Author(string firstName, string lastName)
+        private Author(string firstName, string lastName)
         {
             UpdateName(firstName, lastName);
         }
 
-        public void UpdateName(string firstName, string lastName)
+        internal void UpdateName(string firstName, string lastName)
         {
             FirstName = firstName?.Trim() ?? string.Empty;
             LastName = lastName?.Trim() ?? string.Empty;

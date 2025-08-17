@@ -1,35 +1,18 @@
-﻿using Library.Application.Interfaces;
-using Library.Domain.Entities;
+﻿using Library.Domain.Enums;
 using MediatR;
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Library.Application.Commands
 {
-    public record CreateBookCommand(string Title, string Author, int Year, string Genre)
-       : IRequest<int>;
-
-    public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, int>
-    {
-        private readonly IBookRepository _repository;
-
-        public CreateBookCommandHandler(IBookRepository repository)
-        {
-            _repository = repository;
-        }
-
-        public async Task<int> Handle(CreateBookCommand request, CancellationToken cancellationToken)
-        {
-            var book = new Book
-            {
-                Title = request.Title,
-                Author = request.Author,
-                Year = request.Year,
-                Genre = request.Genre
-            };
-
-            await _repository.AddAsync(book);
-
-            return book.Id;
-        }
-    }
+    public sealed record CreateBookCommand(
+     string Title,
+     int Year,
+     Genre Genre,
+     string Isbn,
+     string? Description
+ ) : IRequest<Guid>;
 }

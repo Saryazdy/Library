@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6qrWcGoK5ao=",
+  "dgSpecHash": "ydcYm++EFdE=",
   "success": true,
   "projectFilePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Library.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\m_saryazdi\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
+    "C:\\Users\\m_saryazdi\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
+    "C:\\Users\\m_saryazdi\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\m_saryazdi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.8\\microsoft.entityframeworkcore.9.0.8.nupkg.sha512",
@@ -22,15 +26,5 @@
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.1\\microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
     "C:\\Users\\m_saryazdi\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Library.Infrastructure.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\m_saryazdi\\source\\repos\\lib\\Library.Infrastructure\\Library.Infrastructure.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
