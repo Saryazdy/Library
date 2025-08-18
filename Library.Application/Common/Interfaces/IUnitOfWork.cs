@@ -8,6 +8,7 @@ namespace Library.Application.Common.Interfaces
 {
     public interface IUnitOfWork
     {
+        IRepository<T> Repository<T>() where T : class;
         Task BeginAsync(CancellationToken ct = default);
         Task CommitAsync(CancellationToken ct = default);
         Task RollbackAsync(CancellationToken ct = default);

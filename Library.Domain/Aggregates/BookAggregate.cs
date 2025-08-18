@@ -19,7 +19,12 @@ namespace Library.Domain.Aggregates
             var book = Book.Create(title, year, genre, isbn, description);
             return new BookAggregate(book);
         }
-
+        public static BookAggregate FromEntity(Book book) => new BookAggregate(book);
+        public static BookAggregate CreateFromEntity(Book book)
+        {
+            if (book == null) throw new ArgumentNullException(nameof(book));
+            return new BookAggregate(book);
+        }
         // تغییر اطلاعات Book
         public void Update(string title, int year, Genre genre, Isbn? isbn = null, string? description = null)
         {

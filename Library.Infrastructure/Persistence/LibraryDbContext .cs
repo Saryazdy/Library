@@ -16,7 +16,6 @@ namespace Library.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // BookAuthor: Composite key
             modelBuilder.Entity<BookAuthor>()
                 .HasKey(ba => new { ba.BookId, ba.AuthorId });
 
@@ -32,3 +31,4 @@ namespace Library.Infrastructure.Data
         }
     }
 }
+

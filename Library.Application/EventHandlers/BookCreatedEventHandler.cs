@@ -23,8 +23,8 @@ namespace Library.Application.EventHandlers
         {
             var subject = $"New book: {notification.Book.Title}";
             var body = $"Book '{notification.Book.Title}' created at {notification.OccurredOn:u}";
-            await _email.SendAsync("admin@library.local", subject, body, ct);
-            await _sms.SendAsync("+989100000000", $"New book: {notification.Book.Title}", ct);
+            await _email.SendEmailAsync("admin@library.local", subject, body, ct);
+            await _sms.SendSmsAsync("+989100000000", $"New book: {notification.Book.Title}", ct);
         }
     }
 }

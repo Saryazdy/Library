@@ -54,3 +54,7 @@ C:\Users\m_saryazdi\source\repos\lib\Library\obj\Debug\net9.0\refint\Library.API
 C:\Users\m_saryazdi\source\repos\lib\Library\obj\Debug\net9.0\Library.API.pdb
 C:\Users\m_saryazdi\source\repos\lib\Library\obj\Debug\net9.0\Library.API.genruntimeconfig.cache
 C:\Users\m_saryazdi\source\repos\lib\Library\obj\Debug\net9.0\ref\Library.API.dll
+C:\Users\m_saryazdi\source\repos\lib\Library\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\m_saryazdi\source\repos\lib\Library\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\m_saryazdi\source\repos\lib\Library\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\Users\m_saryazdi\source\repos\lib\Library\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

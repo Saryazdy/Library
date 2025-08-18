@@ -3,32 +3,36 @@ using Library.Application._Extensions;
 using Library.Application.Books.Dtos;
 using Library.Application.Common.Exceptions;
 using Library.Application.Common.Interfaces;
+using Library.Application.Common.Specifications;
+using Library.Domain.Aggregates;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Microsoft.Extensions.Caching.Memory;
+ 
 namespace Library.Application.Queries.GetBookDetail
 {
     public sealed class GetBookDetailQueryHandler : IRequestHandler<GetBookDetailQuery, BookDto>
     {
-        private readonly IApplicationDbContext _ctx;
+        private readonly IRepository<BookAggregate> _repo;
         private readonly IMapper _mapper;
+        private readonly IMemoryCache _cache;
 
-        public GetBookDetailQueryHandler(IApplicationDbContext ctx, IMapper mapper)
+        public GetBookDetailQueryHandler(IRepository<BookAggregate> repo, IMapper mapper, IMemoryCache cache)
         {
-            _ctx = ctx; _mapper = mapper;
+            _repo = repo; _mapper = mapper; _cache = cache;
         }
 
         public async Task<BookDto> Handle(GetBookDetailQuery request, CancellationToken ct)
         {
-            var agg = await _ctx.Books.FirstOrDefaultAsync(b => b.Book.Id == request.Id, ct)
-                      ?? throw new NotFoundException("Book", request.Id);
+            var cacheKey = $"book-detail-{request.Id}";
+            if (_cache.TryGetValue(cacheKey, out BookDto? cached))
+                return cached!;
 
-            // اگر AutoMapper روی Book → BookDto تنظیم شده:
-            var dto = _mapper.Map<BookDto>(agg.Book);
+            var spec = new BookWithAuthorsSpec(request.Id);
+            var book = await _repo.FirstOrDefaultAsync(spec, ct)
+                       ?? throw new NotFoundException("Book", request.Id);
+
+            var dto = _mapper.Map<BookDto>(book);
+            _cache.Set(cacheKey, dto, TimeSpan.FromMinutes(5));
             return dto;
         }
     }

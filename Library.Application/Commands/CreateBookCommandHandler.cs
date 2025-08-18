@@ -12,19 +12,33 @@ namespace Library.Application.Commands
 {
     public sealed class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, Guid>
     {
-        private readonly IApplicationDbContext _ctx;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CreateBookCommandHandler(IApplicationDbContext ctx) => _ctx = ctx;
+        public CreateBookCommandHandler(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
 
         public async Task<Guid> Handle(CreateBookCommand request, CancellationToken ct)
         {
+            // ایجاد Aggregate
             var isbn = Isbn.Create(request.Isbn);
-            var agg = BookAggregate.Create(request.Title, request.Year, request.Genre, isbn, request.Description);
+            var bookAgg = BookAggregate.Create(
+                request.Title,
+                request.Year,
+                request.Genre,
+                isbn,
+                request.Description
+            );
 
-            await _ctx.AddAsync(agg, ct);
-            await _ctx.SaveChangesAsync(ct);
+            // اضافه کردن به Repository
+            await _unitOfWork.Repository<BookAggregate>().AddAsync(bookAgg, ct);
 
-            return agg.Book.Id; // فرضاً Book داخل Aggregate شناسه دارد
+            // ذخیره تغییرات با UnitOfWork
+            await _unitOfWork.CommitAsync(ct);
+
+            return bookAgg.Book.Id;
         }
     }
 }
+

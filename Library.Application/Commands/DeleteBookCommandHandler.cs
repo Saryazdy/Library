@@ -1,6 +1,8 @@
 ﻿using Library.Application._Extensions;
 using Library.Application.Common.Exceptions;
 using Library.Application.Common.Interfaces;
+using Library.Application.Common.Specifications;
+using Library.Domain.Aggregates;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,19 +12,30 @@ using System.Threading.Tasks;
 
 namespace Library.Application.Commands
 {
-    public sealed class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommand>
+    namespace Library.Application.Commands
     {
-        private readonly IApplicationDbContext _ctx;
-
-        public DeleteBookCommandHandler(IApplicationDbContext ctx) => _ctx = ctx;
-
-        public async Task Handle(DeleteBookCommand request, CancellationToken ct)
+        public sealed class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommand>
         {
-            var agg = await _ctx.Books.FirstOrDefaultAsync(x => x.Book.Id == request.Id, ct)
-                      ?? throw new NotFoundException("Book", request.Id);
+            private readonly IUnitOfWork _unitOfWork;
 
-            await _ctx.RemoveAsync(agg, ct);
-            await _ctx.SaveChangesAsync(ct);
+            public DeleteBookCommandHandler(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
+
+            public async Task Handle(DeleteBookCommand request, CancellationToken ct)
+            {
+                // گرفتن ریپازیتوری
+                var bookRepo = _unitOfWork.Repository<BookAggregate>();
+
+                // می‌توان از Specification استفاده کرد
+                var spec = new BookByIdSpecification(request.Id);
+
+                var book = await bookRepo.FirstOrDefaultAsync(spec, ct)
+                           ?? throw new NotFoundException("Book", request.Id);
+
+                await bookRepo.RemoveAsync(book, ct);
+
+                // Commit کل تغییرات
+                await _unitOfWork.CommitAsync(ct);
+            }
         }
     }
 }

@@ -8,6 +8,6 @@ namespace Library.Application.Common.Interfaces
 {
     public interface ISmsService
     {
-        Task SendAsync(string number, string message, CancellationToken ct = default);
+        public Task SendSmsAsync(string number, string message, CancellationToken ct = default);
     }
 }

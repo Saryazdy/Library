@@ -10,6 +10,7 @@ namespace Library.Domain.Aggregates
             _author = author ?? throw new ArgumentNullException(nameof(author));
         }
 
+        public static AuthorAggregate FromEntity(Author author) => new AuthorAggregate(author);
         public static AuthorAggregate Create(string firstName, string lastName)
         {
             var author = Author.Create(firstName, lastName);
