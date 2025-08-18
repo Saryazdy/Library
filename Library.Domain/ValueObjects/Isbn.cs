@@ -22,7 +22,7 @@ namespace Library.Domain.ValueObjects
         {
             Value = normalized;
         }
-
+        private Isbn() { }
         public static Isbn Create(string input)
         {
             if (string.IsNullOrWhiteSpace(input))

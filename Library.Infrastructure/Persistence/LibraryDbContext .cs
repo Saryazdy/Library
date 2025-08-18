@@ -15,7 +15,15 @@ namespace Library.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Book>(b =>
+            {
+                b.HasKey(x => x.Id);
 
+                b.OwnsOne(x => x.Isbn, isbn =>
+                {
+                    isbn.Property(i => i.Value).HasColumnName("Isbn");
+                });
+            });
             modelBuilder.Entity<BookAuthor>()
                 .HasKey(ba => new { ba.BookId, ba.AuthorId });
 

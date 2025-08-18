@@ -22,7 +22,7 @@ namespace Library.Application.Commands
 
             public async Task Handle(DeleteBookCommand request, CancellationToken ct)
             {
-                // گرفتن ریپازیتوری
+         
                 var bookRepo = _unitOfWork.Repository<BookAggregate>();
 
                 // می‌توان از Specification استفاده کرد

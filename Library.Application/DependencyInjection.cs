@@ -33,9 +33,9 @@ namespace Library.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
 
             // اختیاری:
-            // services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehaviour<,>));
-            // services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
-            // services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RetryBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RetryBehaviour<,>));
 
             return services;
         }

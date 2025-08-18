@@ -25,7 +25,8 @@ namespace Library.Infrastructure
             services.AddDbContext<LibraryDbContext>(options =>
             {
                 var cs = configuration.GetConnectionString("LibraryDatabase");
-                options.UseSqlServer(cs, opt => opt.EnableRetryOnFailure());
+                options.UseSqlServer(cs, sqlOptions =>
+     sqlOptions.MigrationsAssembly("Library.Infrastructure"));
             });
 
             // Memory cache

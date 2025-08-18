@@ -11,9 +11,9 @@ namespace Library.Infrastructure.Persistence
 {
     public class EfRepository<T> : IRepository<T> where T : class
     {
-        private readonly DbContext _context;
+        private readonly LibraryDbContext _context;
 
-        public EfRepository(DbContext context)
+        public EfRepository(LibraryDbContext context)
         {
             _context = context;
         }

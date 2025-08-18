@@ -1,5 +1,6 @@
 ﻿using Library.Application.Common.Interfaces;
 using Library.Domain.Aggregates;
+using Library.Domain.Factories;
 using Library.Domain.ValueObjects;
 using MediatR;
 using System;
@@ -21,20 +22,16 @@ namespace Library.Application.Commands
 
         public async Task<Guid> Handle(CreateBookCommand request, CancellationToken ct)
         {
-            // ایجاد Aggregate
-            var isbn = Isbn.Create(request.Isbn);
-            var bookAgg = BookAggregate.Create(
+           
+            var bookAgg = BookFactory.CreateNewBook(
                 request.Title,
+                request.Isbn,
                 request.Year,
-                request.Genre,
-                isbn,
-                request.Description
+                request.Genre
             );
 
-            // اضافه کردن به Repository
+          
             await _unitOfWork.Repository<BookAggregate>().AddAsync(bookAgg, ct);
-
-            // ذخیره تغییرات با UnitOfWork
             await _unitOfWork.CommitAsync(ct);
 
             return bookAgg.Book.Id;
