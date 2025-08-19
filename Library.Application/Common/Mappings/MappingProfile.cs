@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Library.Application.Books.Dtos;
+using Library.Domain.Aggregates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,13 @@ namespace Library.Application.Common.Mappings
         public MappingProfile()
         {
             CreateMap<Book, BookDto>()
-                .ForMember(d => d.Isbn, opt => opt.MapFrom(s => s.Isbn.ToString()))
-                .ForMember(d => d.Authors, opt => opt.MapFrom(s => s.BookAuthors.Select(ba => ba.Author.FullName)))
-                .ForMember(d => d.Genre, opt => opt.MapFrom(s => s.Genre.ToString()));
+          .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+          .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
+          .ForMember(dest => dest.Year, opt => opt.MapFrom(src => src.Year))
+          .ForMember(dest => dest.Genre, opt => opt.MapFrom(src => src.Genre.ToString()))
+          .ForMember(dest => dest.Isbn, opt => opt.MapFrom(src => src.Isbn != null ? src.Isbn.Value : string.Empty))
+          .ForMember(dest => dest.Authors, opt => opt.MapFrom(src => src.BookAuthors.Select(ba => ba.Author.FullName).ToList()));
         }
     }
+    
 }

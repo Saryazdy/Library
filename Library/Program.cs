@@ -1,4 +1,6 @@
+using Library.API.Common.Services;
 using Library.Application;
+using Library.Application.Common.Behaviours;
 using Library.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +11,8 @@ builder.Services.AddInfrastructureServices(builder.Configuration); // DbContext,
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 var app = builder.Build();
 
 app.UseSwagger();

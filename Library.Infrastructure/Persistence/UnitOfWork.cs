@@ -40,6 +40,9 @@ namespace Library.Infrastructure.Data
 
         public async Task CommitAsync(CancellationToken ct = default)
         {
+            _transaction ??= _context.Database.CurrentTransaction ??
+                await _context.Database.BeginTransactionAsync(ct);
+
             if (_transaction == null)
                 throw new InvalidOperationException("No transaction started.");
 

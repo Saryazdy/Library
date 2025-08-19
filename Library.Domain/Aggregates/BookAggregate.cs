@@ -1,16 +1,22 @@
 ﻿using Library.Domain.Aggregates;
+using Library.Domain.Common;
 using Library.Domain.Entities;
 using Library.Domain.Enums;
 using Library.Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Library.Domain.Aggregates
 {
-    public class BookAggregate
+    public class BookAggregate:BaseEntity
     {
         private readonly Book _book;
 
         private BookAggregate(Book book)
         {
             _book = book ?? throw new ArgumentNullException(nameof(book));
+        }
+        private BookAggregate()
+        {
+  
         }
 
         // Factory برای ایجاد Book
@@ -32,11 +38,10 @@ namespace Library.Domain.Aggregates
         }
 
         // مدیریت Authors از طریق BookAuthor
-        public void AddAuthor(AuthorAggregate authorAggregate)
+        public void AddAuthor(Author author)
         {
-            if (authorAggregate == null) throw new ArgumentNullException(nameof(authorAggregate));
+            if (author == null) throw new ArgumentNullException(nameof(author));
 
-            var author = authorAggregate.Author;
             if (_book.BookAuthors.Any(ba => ba.AuthorId == author.Id)) return;
 
             var link = new BookAuthor(_book, author);
@@ -53,6 +58,11 @@ namespace Library.Domain.Aggregates
 
         // دسترسی خواندنی
         public Book Book => _book;
+
+
+
         public IReadOnlyCollection<BookAuthor> BookAuthors => _book.BookAuthors;
+
+
     }
 }

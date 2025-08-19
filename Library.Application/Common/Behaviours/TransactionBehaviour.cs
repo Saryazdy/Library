@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Library.Application.Common.Interfaces;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace Library.Application.Common.Behaviours
     public class TransactionBehaviour<TRequest, TResponse>
         : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
-        private readonly DbContext _dbContext;
+        private readonly IApplicationDbContext _dbContext;
 
-        public TransactionBehaviour(DbContext dbContext)
+        public TransactionBehaviour(IApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
         }

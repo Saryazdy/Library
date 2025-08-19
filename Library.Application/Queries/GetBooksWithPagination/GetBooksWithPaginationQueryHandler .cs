@@ -33,7 +33,7 @@ namespace Library.Application.Queries.GetBooksWithPagination
             var spec = new BooksWithPaginationSpecification(request.PageNumber, request.PageSize);
 
             // 1. گرفتن IQueryable با Specification
-            var queryable = _unitOfWork.Repository<BookAggregate>().ApplySpecification(spec);
+            var queryable = _unitOfWork.Repository<Book>().ApplySpecification(spec);
 
             // 2. Projection به DTO
             var projected = queryable.ProjectTo<BookDto>(_mapper.ConfigurationProvider).AsNoTracking();

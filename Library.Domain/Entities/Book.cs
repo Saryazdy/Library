@@ -4,6 +4,7 @@ using Library.Domain.Enums;
 using Library.Domain.Events;
 using Library.Domain.Exceptions;
 using Library.Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations.Schema;
 
 public class Book : AuditableEntity, IHasDomainEvent
 {
@@ -15,6 +16,7 @@ public class Book : AuditableEntity, IHasDomainEvent
     public DateTime PublishedOn { get; private set; }
 
     private readonly List<BookAuthor> _bookAuthors = new();
+  
     public IReadOnlyCollection<BookAuthor> BookAuthors => _bookAuthors.AsReadOnly();
 
     private Book() { }

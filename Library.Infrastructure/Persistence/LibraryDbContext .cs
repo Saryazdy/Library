@@ -1,10 +1,12 @@
-﻿using Library.Domain.Entities;
+﻿using Library.Application.Common.Interfaces;
+using Library.Domain.Aggregates;
+using Library.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace Library.Infrastructure.Data
 {
-    public class LibraryDbContext : DbContext
+    public class LibraryDbContext : DbContext, IApplicationDbContext
     {
         public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options) { }
 
@@ -15,15 +17,34 @@ namespace Library.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // Book
             modelBuilder.Entity<Book>(b =>
             {
                 b.HasKey(x => x.Id);
+                b.Property(x => x.Title).HasMaxLength(200);
 
                 b.OwnsOne(x => x.Isbn, isbn =>
                 {
                     isbn.Property(i => i.Value).HasColumnName("Isbn");
                 });
+
+                b.Metadata.FindNavigation(nameof(Book.BookAuthors))!
+                    .SetPropertyAccessMode(PropertyAccessMode.Field);
             });
+
+            // Author
+            modelBuilder.Entity<Author>(a =>
+            {
+                a.HasKey(x => x.Id);
+                a.Property(x => x.FirstName).HasMaxLength(300);
+                a.Property(x => x.LastName).HasMaxLength(300);
+
+                a.Metadata.FindNavigation(nameof(Author.BookAuthors))!
+                    .SetPropertyAccessMode(PropertyAccessMode.Field);
+            });
+
+            // BookAuthor (many-to-many)
             modelBuilder.Entity<BookAuthor>()
                 .HasKey(ba => new { ba.BookId, ba.AuthorId });
 
@@ -39,4 +60,5 @@ namespace Library.Infrastructure.Data
         }
     }
 }
+
 

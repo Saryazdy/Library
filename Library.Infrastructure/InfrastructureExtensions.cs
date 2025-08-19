@@ -26,9 +26,9 @@ namespace Library.Infrastructure
             {
                 var cs = configuration.GetConnectionString("LibraryDatabase");
                 options.UseSqlServer(cs, sqlOptions =>
-     sqlOptions.MigrationsAssembly("Library.Infrastructure"));
+                     sqlOptions.MigrationsAssembly("Library.Infrastructure"));
             });
-
+            services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<LibraryDbContext>());
             // Memory cache
             services.AddMemoryCache();
 
@@ -45,6 +45,10 @@ namespace Library.Infrastructure
 
             // UnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            //using var scope = services.BuildServiceProvider().CreateScope();
+            //var context = scope.ServiceProvider.GetRequiredService<LibraryDbContext>();
+            //DbInitializer.Seed(context, 30, 100);
             return services;
         }
 

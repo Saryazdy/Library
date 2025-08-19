@@ -1,4 +1,5 @@
-﻿using Library.Domain.Entities;
+﻿using Library.Domain.Aggregates;
+using Library.Domain.Entities;
 
 public class BookAuthor
 {
@@ -8,7 +9,7 @@ public class BookAuthor
     {
         Book = book ?? throw new ArgumentNullException(nameof(book));
         BookId = book.Id;
-        Author = author ?? throw new ArgumentNullException(nameof(author));
+        Author= author ?? throw new ArgumentNullException(nameof(author));
         AuthorId = author.Id;
     }
 

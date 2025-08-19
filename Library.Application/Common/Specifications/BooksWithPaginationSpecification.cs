@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Library.Application.Common.Specifications
 {
-    public sealed class BooksWithPaginationSpecification : ISpecification<BookAggregate>
+    public sealed class BooksWithPaginationSpecification : ISpecification<Book>
     {
         public int PageNumber { get; }
         public int PageSize { get; }
@@ -18,7 +18,7 @@ namespace Library.Application.Common.Specifications
         public int? Skip => (PageNumber - 1) * PageSize;
 
         // اگر بخواهید ترتیب مشخصی داشته باشید
-        public Expression<Func<BookAggregate, object>>? OrderBy => b => b.Book.Title;
+        public Expression<Func<Book, object>>? OrderBy => b => b.Title;
 
         public BooksWithPaginationSpecification(int pageNumber, int pageSize)
         {
@@ -26,7 +26,7 @@ namespace Library.Application.Common.Specifications
             PageSize = pageSize < 1 ? 10 : pageSize;
         }
 
-        public IQueryable<BookAggregate> Apply(IQueryable<BookAggregate> query)
+        public IQueryable<Book> Apply(IQueryable<Book> query)
         {
             if (OrderBy != null)
             {
