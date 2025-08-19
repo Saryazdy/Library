@@ -5,6 +5,7 @@ using Library.Application.Books.Dtos;
 using Library.Application.Common.Interfaces;
 using Library.Application.Common.Models;
 using Library.Application.Common.Specifications;
+using Library.Application.Responses;
 using Library.Domain.Aggregates;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +18,7 @@ using System.Threading.Tasks;
 namespace Library.Application.Queries.GetBooksWithPagination
 {
     public sealed class GetBooksWithPaginationQueryHandler
-         : IRequestHandler<GetBooksWithPaginationQuery, PaginatedList<BookDto>>
+         : IRequestHandler<GetBooksWithPaginationQuery, ApiResponse<PaginatedList<BookDto>>>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -28,7 +29,7 @@ namespace Library.Application.Queries.GetBooksWithPagination
             _mapper = mapper;
         }
 
-        public async Task<PaginatedList<BookDto>> Handle(GetBooksWithPaginationQuery request, CancellationToken ct)
+        public async Task<ApiResponse<PaginatedList<BookDto>>> Handle(GetBooksWithPaginationQuery request, CancellationToken ct)
         {
             var spec = new BooksWithPaginationSpecification(request.PageNumber, request.PageSize);
 
@@ -38,8 +39,10 @@ namespace Library.Application.Queries.GetBooksWithPagination
             // 2. Projection به DTO
             var projected = queryable.ProjectTo<BookDto>(_mapper.ConfigurationProvider).AsNoTracking();
 
+            var list=await PaginatedList<BookDto>.CreateAsync(projected, request.PageNumber, request.PageSize, ct);
+
             // 3. ایجاد PaginatedList
-            return await PaginatedList<BookDto>.CreateAsync(projected, request.PageNumber, request.PageSize, ct);
+            return ApiResponse<PaginatedList<BookDto>>.Ok(list);
         }
     }
 }

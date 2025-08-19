@@ -1,5 +1,7 @@
 ﻿using Library.Application.Common.Interfaces;
+using Library.Domain.Common;
 using Library.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -66,7 +68,27 @@ namespace Library.Infrastructure.Data
                 }
             }
         }
+        public async Task DispatchDomainEventsAsync(IPublisher mediator, CancellationToken ct = default)
+        {
+            var entitiesWithEvents = _context.ChangeTracker
+                .Entries<IHasDomainEvent>() 
+                .Select(e => e.Entity)
+                .Where(e => e.DomainEvents.Any())
+                .ToList();
 
+            var domainEvents = entitiesWithEvents
+                .SelectMany(e => e.DomainEvents)
+                .ToList();
+
+            // پاک کردن event ها بعد از جمع‌آوری
+            entitiesWithEvents.ForEach(e => e.ClearDomainEvents());
+
+            foreach (var domainEvent in domainEvents)
+            {
+                await mediator.Publish(domainEvent, ct);
+            }
+        }
+    
         public async Task RollbackAsync(CancellationToken ct = default)
         {
             if (_transaction == null) return;

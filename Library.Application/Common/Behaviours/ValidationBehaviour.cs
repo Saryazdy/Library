@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
+using Library.Application.Responses.ProjectName.Application.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -29,15 +30,15 @@ namespace Library.Application.Common.Behaviours
             var context = new ValidationContext<TRequest>(request);
             var failures = (await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, ct))))
                            .SelectMany(r => r.Errors)
-                           .Where(f => f is not null).ToList();
+                           .Where(f => f is not null)
+                           .ToList();
 
             if (failures.Count != 0)
             {
-                throw new Common.Exceptions.ValidationException(failures);
+                throw new ValidationException(failures);
             }
 
             return await next();
         }
     }
-
 }

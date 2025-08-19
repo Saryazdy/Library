@@ -34,6 +34,7 @@ namespace Library.API.Controllers
         public async Task<ActionResult<Guid>> Create([FromBody] CreateBookCommand command, CancellationToken ct)
         {
             var id = await _mediator.Send(command, ct);
+           
             return CreatedAtAction(nameof(Get), new { id }, id);
         }
 

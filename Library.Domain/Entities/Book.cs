@@ -40,7 +40,7 @@ public class Book : AuditableEntity, IHasDomainEvent
         Description = string.IsNullOrWhiteSpace(description) ? null : description.Trim();
 
         if (raiseEvent)
-            AddDomainEvent(new BookUpdatedEvent(this));
+            AddDomainEvent(new BookCreatedEvent(this));
     }
 
     internal void AddBookAuthor(BookAuthor bookAuthor)

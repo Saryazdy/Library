@@ -1,19 +1,21 @@
 ﻿using Library.Application.Common.Interfaces;
 using Library.Domain.Aggregates;
 using Library.Domain.Entities;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
-
+using Library.Application._Extensions;
 
 namespace Library.Infrastructure.Data
 {
     public class LibraryDbContext : DbContext, IApplicationDbContext
     {
-        public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options) { }
+        private readonly IMediator _mediator;
+        public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options) {  }
 
         public DbSet<Book> Books => Set<Book>();
         public DbSet<Author> Authors => Set<Author>();
         public DbSet<BookAuthor> BookAuthors => Set<BookAuthor>();
-
+ 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

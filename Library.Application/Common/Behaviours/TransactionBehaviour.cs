@@ -1,22 +1,20 @@
 ﻿using Library.Application.Common.Interfaces;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Library.Application.Common.Behaviours
 {
-    public class TransactionBehaviour<TRequest, TResponse>
-        : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class TransactionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+        where TRequest : IRequest<TResponse>
     {
-        private readonly IApplicationDbContext _dbContext;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IPublisher _mediator; // برای dispatch event های دامنه
 
-        public TransactionBehaviour(IApplicationDbContext dbContext)
+        public TransactionBehaviour(IUnitOfWork unitOfWork, IPublisher mediator)
         {
-            _dbContext = dbContext;
+            _unitOfWork = unitOfWork;
+            _mediator = mediator;
         }
 
         public async Task<TResponse> Handle(
@@ -24,19 +22,33 @@ namespace Library.Application.Common.Behaviours
             RequestHandlerDelegate<TResponse> next,
             CancellationToken cancellationToken)
         {
-            var strategy = _dbContext.Database.CreateExecutionStrategy();
+            // بررسی اینکه آیا قبلاً تراکنش باز هست یا نه
+            var hasActiveTransaction = false;
 
-            return await strategy.ExecuteAsync(async () =>
+            try
             {
-                await using var transaction = await _dbContext.Database.BeginTransactionAsync(cancellationToken);
+                if (_unitOfWork is null)
+                    throw new System.InvalidOperationException("UnitOfWork is not initialized.");
 
-                var response = await next();
+                await _unitOfWork.BeginAsync(cancellationToken);
+                hasActiveTransaction = true;
 
-                await _dbContext.Database.CommitTransactionAsync(cancellationToken);
+                var response = await next(); // اجرای handler اصلی
+
+                await _unitOfWork.CommitAsync(cancellationToken); // commit تغییرات
+
+                // بعد از commit، event های دامنه رو dispatch کن
+                await _unitOfWork.DispatchDomainEventsAsync(_mediator, cancellationToken);
 
                 return response;
-            });
+            }
+            catch
+            {
+                if (hasActiveTransaction)
+                    await _unitOfWork.RollbackAsync(cancellationToken);
+
+                throw;
+            }
         }
     }
-
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace Library.Application.Common.Interfaces
         Task BeginAsync(CancellationToken ct = default);
         Task CommitAsync(CancellationToken ct = default);
         Task RollbackAsync(CancellationToken ct = default);
+        Task DispatchDomainEventsAsync(IPublisher mediator, CancellationToken ct = default);
     }
 }

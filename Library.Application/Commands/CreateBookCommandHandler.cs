@@ -29,10 +29,9 @@ namespace Library.Application.Commands
                 request.Year,
                 request.Genre
             );
-            bookAgg.Id = new Guid();
+ 
           
-            await _unitOfWork.Repository<BookAggregate>().AddAsync(bookAgg, ct);
-            await _unitOfWork.CommitAsync(ct);
+            await _unitOfWork.Repository<Book>().AddAsync(bookAgg.Book, ct);
 
             return bookAgg.Book.Id;
         }

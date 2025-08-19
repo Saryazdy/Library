@@ -15,7 +15,6 @@ namespace Library.Application.Common.Interfaces
     {
         DatabaseFacade Database { get; }   // برای دسترسی به تراکنش
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
-
         // اینجا DbSetهایی که نیاز داری
         DbSet<Book> Books { get; }
         DbSet<Author> Authors { get; }

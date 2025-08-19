@@ -1,8 +1,9 @@
-﻿using Library.Application.Common.Behaviours;
+﻿using FluentValidation;
+using Library.Application.Common.Behaviours;
+using Library.Application.Common.Interfaces;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using FluentValidation;
 
 
 
@@ -36,7 +37,7 @@ namespace Library.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RetryBehaviour<,>));
-
+      
             return services;
         }
     }
